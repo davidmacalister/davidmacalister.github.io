@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="site_title_projects">Menino David: Projetos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body class="lang-loading">
+    <div class="top-gradient-shadow"></div>
+
+    <header class="top-nav">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="active" data-i18n="nav_inicio">início</a>
+            <a href="projects.html" data-i18n="nav_projetos">projetos</a>
+            <a href="about.html" data-i18n="nav_sobre">sobre</a>
+        </nav>
+
+        <!-- NOVO: Seletor de Idiomas -->
+        <div class="lang-selector">
+                <div class="lang-selected">
+                <img src="https://twemoji.maxcdn.com/v/latest/svg/1f1e7-1f1f7.svg" id="current-flag" alt="Bandeira">
+                <span data-i18n="idioma_label">idioma</span>
+                <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <ul class="lang-dropdown">
+                <li data-lang="pt" onclick="changeLanguage('pt')"><img src="https://twemoji.maxcdn.com/v/latest/svg/1f1e7-1f1f7.svg"> Português</li>
+                <li data-lang="en" onclick="changeLanguage('en')"><img src="https://twemoji.maxcdn.com/v/latest/svg/1f1fa-1f1f8.svg"> English</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="projects-container">
+        <h1 class="title-section-project" data-i18n="participate"><strong>Projetos que participei</strong></h1>
+        <!-- PROJETO 1 -->
+        <section class="window project-card">
+            <div class="window-header">
+                <span class="title">
+                <span data-i18n="site_project">Projeto</span> #01
+                </span>
+                <div class="window-controls">
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M19,8L15,12L19,16L16,19L12,15L8,19L5,16L9,12L5,8L8,5L12,9L16,5L19,8zM 24.002288,3.0011778 15,12 l 9.00226,8.99933 -3,3 L 12,15 l -8.9946118,9.00388 -3.00000004,-3 L 9,12 0.00284205,3.0077437 3.0028421,0.00774375 12,9 21.002288,0.00117779 Z"/></svg></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2 class="project-title">Darker++</h2>
+                <p class="project-credits"><strong data-i18n="credits">Créditos:</strong> Kenned, Menino David.</p> 
+                
+                <details class="project-details">
+                    <summary data-i18n="read_more">Ler descrição completa</summary>
+                    <div class="details-content">
+                        <p data-i18n="darker_description">Darker++ é um instalador de tema escuro projetado para o Hammer++, que oferece uma melhor experiência visual Hammer++ e no Windows.<br> <br><strong>Minha participação</strong><br>Sou o idealizador do projeto, e criador dos ícones adaptados para o tema escuro e mantenedor das DLLs adaptadas para o tema escuro.</p>
+                    </div>
+                </details>
+
+                <div class="project-actions" style="display:flex;align-items:center;gap:12px;">
+                    <a href="https://github.com/kenned-candido/darkerplusplus" class="retro-btn btn-small" target="_blank" rel="noopener">
+                        <span data-i18n="view_repo">VER NO GITHUB</span>
+                    </a>                        
+                    <a href="https://github.com/kenned-candido/darkerplusplus/releases/download/Darker%2B%2Bv.4.2/Darker++V.4.2.Build.8871.7z" class="retro-btn btn-small" target="_blank" rel="noopener">
+                        <span data-i18n="download">BAIXAR AGORA</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <main class="projects-container">
+
+        <!-- PROJETO 2 -->
+        <section class="window project-card">
+            <div class="window-header">
+                <span class="title">
+                <span data-i18n="site_project">Projeto</span> #02
+                </span>
+                <div class="window-controls">
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M19,8L15,12L19,16L16,19L12,15L8,19L5,16L9,12L5,8L8,5L12,9L16,5L19,8zM 24.002288,3.0011778 15,12 l 9.00226,8.99933 -3,3 L 12,15 l -8.9946118,9.00388 -3.00000004,-3 L 9,12 0.00284205,3.0077437 3.0028421,0.00774375 12,9 21.002288,0.00117779 Z"/></svg></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2 class="project-title">Valve on Android</h2>
+                <p class="project-credits"><strong data-i18n="credits">Créditos:</strong> Kenned, Menino David.</p> 
+                
+                <details class="project-details">
+                    <summary data-i18n="read_more">Ler descrição completa</summary>
+                    <div class="details-content">
+                        <p data-i18n="valveonandroid_description">Este projeto tem como objetivo facilitar o download de jogos da Valve no Android de forma legal.</p>
+                    </details>
+                    <div class="project-actions" style="display:flex;align-items:center;gap:12px;">
+                        <a href="https://github.com/kenned-candido/valve-on-android" class="retro-btn btn-small" target="_blank" rel="noopener">
+                            <span data-i18n="view_repo">VER NO GITHUB</span>
+                        </a>                        
+                        <a href="https://github.com/kenned-candido/valve-on-android/releases/download/continuos/Tutorial.txt" class="retro-btn btn-small" target="_blank" rel="noopener">
+                            <span data-i18n="download">BAIXAR AGORA</span>
+                        </a>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="site_title_about">Menino David: Sobre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body class="lang-loading">
+    <div class="top-gradient-shadow"></div>
+
+    <header class="top-nav">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="active" data-i18n="nav_inicio">início</a>
+            <a href="projects.html" data-i18n="nav_projetos">projetos</a>
+            <a href="about.html" data-i18n="nav_sobre">sobre</a>
+        </nav>
+
+        <!-- NOVO: Seletor de Idiomas -->
+        <div class="lang-selector">
+                <div class="lang-selected">
+                <img src="https://twemoji.maxcdn.com/v/latest/svg/1f1e7-1f1f7.svg" id="current-flag" alt="Bandeira">
+                <span data-i18n="idioma_label">idioma</span>
+                <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <ul class="lang-dropdown">
+                <li data-lang="pt" onclick="changeLanguage('pt')"><img src="https://twemoji.maxcdn.com/v/latest/svg/1f1e7-1f1f7.svg"> Português</li>
+                <li data-lang="en" onclick="changeLanguage('en')"><img src="https://twemoji.maxcdn.com/v/latest/svg/1f1fa-1f1f8.svg"> English</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="desktop-container">
+        <section class="window">
+            <div class="window-header">
+                <span class="title" data-i18n="about_me">Sobre mim</span>
+                <div class="window-controls">
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
+                    <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M 24.002288,3.0011778 15,12 l 9.00226,8.99933 -3,3 L 12,15 l -8.9946118,9.00388 -3.00000004,-3 L 9,12 0.00284205,3.0077437 3.0028421,0.00774375 12,9 21.002288,0.00117779 Z"/></svg></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <p data-i18n="about_label">Prazer, me chamo <strong>David</strong>, sou tradutor de inglês para português e editor gráfico. Sou apaixonado pelas criações da Valve, um fã de suas franquias, em especial o Portal 1 que é o jogo da minha vida, O bolo é uma mentira! Graças a isso entrei no mundo de tradução, com o meu primeiro projeto sendo a tradução das texturas do Half-Life 2. Gosto de trabalhar em projetos diversificados no meu tempo livre, um deles que desejo tornar real é meu canal do Youtube. Sou o criador do projeto <a href="https://www.sourcebr.com.br"target="_blank" rel="noopener noreferrer">Source BR</a> membro da <a href="https://www.youtube.com/c/mesapretadubs"target="_blank" rel="noopener noreferrer">Mesa Preta Dubs</a><br> <br>Visite a <a href="projects.html">aba de projetos</a> para ver as minhas criações, detalhes sobre elas e claro, baixa-las. Caso queira me contatar, basta utilizar uma das redes de contato disponíveis, Obrigado por ler até aqui, fui!<br> <br>;)</p>
+            </div>
+        </section>
+
+        <aside class="side-column">
+            <section class="window">
+                <div class="window-header">
+                    <span class="title">Menino David</span>
+                    <div class="window-controls">
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M 24.002288,3.0011778 15,12 l 9.00226,8.99933 -3,3 L 12,15 l -8.9946118,9.00388 -3.00000004,-3 L 9,12 0.00284205,3.0077437 3.0028421,0.00774375 12,9 21.002288,0.00117779 Z"/></svg></button>
+                    </div>
+                </div>
+                <div class="avatar-img"><img src="img/me.gif" alt="Avatar"></div>
+            </section>
+
+            <section class="window">
+                <div class="window-header">
+                    <span class="title" data-i18n="networks">Redes</span>
+                    <div class="window-controls">
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
+                        <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M 24.002288,3.0011778 15,12 l 9.00226,8.99933 -3,3 L 12,15 l -8.9946118,9.00388 -3.00000004,-3 L 9,12 0.00284205,3.0077437 3.0028421,0.00774375 12,9 21.002288,0.00117779 Z"/></svg></button>
+                    </div>
+                </div>
+                <div class="window-content links-list">
+                    <a href="https://steamcommunity.com/id/davidmacalister" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Steam</title><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+                        Steam
+                    </a>
+                    <a href="https://discord.com/users/746429873823678525" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        Discord
+                    </a>
+                    <a href="https://www.youtube.com/@davidmacalister" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        YouTube
+                    </a>
+                    <a href="https://github.com/davidmacalister" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        GitHub
+                    </a>
+                        <a href="mailto:meninodavid@protonmail.com" aria-label="Enviar email para Menino David" title="Enviar email">
+                        <svg class="social-icon" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Email</title><path d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"/></svg>
+                        Email
+                    </a>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
