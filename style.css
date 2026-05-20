@@ -5,6 +5,8 @@
     --bg-color: #2e1e14;
     --dot-color: #23170f;
     --border-color: #f5e1a4;
+    --accent-brown: var(--bg-color);
+        --projects-gap: 40px;
     --text-color: #f5e1a4;
     --dot-grid-size: 90px;
     --lang-width: 220px;
@@ -239,7 +241,7 @@ body.scrolled:not(.show-header) .top-nav {
     border: 3px solid var(--border-color);
     list-style: none;
     padding: 10px 0;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
     min-width: 190px;
     display: none;
 }
@@ -522,7 +524,9 @@ a {
 
 .retro-btn {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 20px 40px;
     font-size: 24px;
     font-weight: 900;
@@ -550,6 +554,22 @@ a {
 .retro-btn span {
     position: relative;
     z-index: 1;
+    display: inline-flex;
+    align-items: center; /* garante alinhamento vertical do texto com o ícone */
+    line-height: 1;
+}
+
+/* GitHub icon inside retro buttons */
+.retro-btn .github-icon {
+    position: relative;
+    z-index: 1;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    margin-right: 0.4em;
+    fill: currentColor; /* herda a cor do botão */
+    transition: fill 0.25s ease, transform 0.25s ease;
+    top: -0.10em;
 }
 
 .retro-btn:hover::before {
@@ -557,9 +577,14 @@ a {
 }
 
 .retro-btn:hover {
-    color: var(--bg-color);
+    color: var(--accent-brown);
     box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
     transform: translate(2px, 2px);
+}
+
+/* Garantir que o ícone também fique marrom junto com o texto durante o hover */
+.retro-btn:hover .github-icon {
+    fill: var(--accent-brown);
 }
 
 @media (max-width: 768px) {
@@ -593,7 +618,7 @@ a {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+        gap: var(--projects-gap);
     z-index: 10;
     position: relative;
 }
@@ -604,6 +629,11 @@ a {
 
 .title-section-project {
     text-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+/* Utilitário: margem superior para títulos de seção quando precisar de espaço extra */
+.title-section-project.mt-top {
+    margin-top: var(--projects-gap);
 }
 
 .project-name {
@@ -801,7 +831,9 @@ a {
     vertical-align: middle;
     align-self: center;
     /* pequeno ajuste fino para subir levemente o ícone */
-    transform: translateY(-0.12em);
+    transform: translateY(-0.1em);
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
 }
 
 .lang-selected span {
@@ -824,7 +856,7 @@ a {
     list-style: none;
     padding: 10px 0;
     display: none; /* Escondido por padrão */
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
     min-width: 190px;
 }
 
@@ -849,7 +881,7 @@ a {
     border: 3px solid var(--border-color);
     list-style: none;
     padding: 10px 0;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
     min-width: 190px;
     z-index: 10001;
 
@@ -900,12 +932,6 @@ a {
     font-weight: 600;
 }
 
-/* Bandeira maior com cantos arredondados no header */
-.lang-selected img {
-    border-radius: 8px;
-    padding: 2px;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.15);
-}
 
 .lang-dropdown li:hover {
     background-color: rgba(245, 225, 164, 0.1);

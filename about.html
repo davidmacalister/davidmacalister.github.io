@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site_title_about">Menino David: Sobre</title>
+    <title data-i18n="site_title_about"></title>
+    <meta property="og:title" content="Menino David | Sobre">
+    <meta property="og:description" content="Tradutor, editor gráfico e entusiasta da Valve">
+    <meta property="og:image" content="https://raw.githubusercontent.com/davidmacalister/davidmacalister.github.io/refs/heads/main/img/logo.png">
+    <meta property="og:url" content="https://davidmacalister.github.io">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#fcde63">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" type="image/png">
 </head>
@@ -15,16 +22,16 @@
             <img src="img/logo.png" alt="Logo">
         </div>
         <nav>
-            <a href="index.html" class="active" data-i18n="nav_inicio">início</a>
-            <a href="projects.html" data-i18n="nav_projetos">projetos</a>
-            <a href="about.html" data-i18n="nav_sobre">sobre</a>
+            <a href="index.html" class="active" data-i18n="nav_home"></a>
+            <a href="projects.html" data-i18n="nav_projects"></a>
+            <a href="about.html" data-i18n="nav_about"></a>
         </nav>
 
-        <!-- NOVO: Seletor de Idiomas -->
+        <!-- Seletor de Idiomas -->
         <div class="lang-selector">
                 <div class="lang-selected">
                 <img src="https://twemoji.maxcdn.com/v/latest/svg/1f1e7-1f1f7.svg" id="current-flag" alt="Bandeira">
-                <span data-i18n="idioma_label">idioma</span>
+                <span data-i18n="nav_language"></span>
                 <svg class="chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
             </div>
             <ul class="lang-dropdown">
@@ -37,7 +44,7 @@
     <main class="desktop-container">
         <section class="window">
             <div class="window-header">
-                <span class="title" data-i18n="about_me">Sobre mim</span>
+                <span class="title" data-i18n="about_me"></span>
                 <div class="window-controls">
                     <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
                     <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
@@ -45,7 +52,7 @@
                 </div>
             </div>
             <div class="window-content">
-                <p data-i18n="about_label">Prazer, me chamo <strong>David</strong>, sou tradutor de inglês para português e editor gráfico. Sou apaixonado pelas criações da Valve, um fã de suas franquias, em especial o Portal 1 que é o jogo da minha vida, O bolo é uma mentira! Graças a isso entrei no mundo de tradução, com o meu primeiro projeto sendo a tradução das texturas do Half-Life 2. Gosto de trabalhar em projetos diversificados no meu tempo livre, um deles que desejo tornar real é meu canal do Youtube. Sou o criador do projeto <a href="https://www.sourcebr.com.br"target="_blank" rel="noopener noreferrer">Source BR</a> membro da <a href="https://www.youtube.com/c/mesapretadubs"target="_blank" rel="noopener noreferrer">Mesa Preta Dubs</a><br> <br>Visite a <a href="projects.html">aba de projetos</a> para ver as minhas criações, detalhes sobre elas e claro, baixa-las. Caso queira me contatar, basta utilizar uma das redes de contato disponíveis, Obrigado por ler até aqui, fui!<br> <br>;)</p>
+                <p data-i18n="about_label"></p>
             </div>
         </section>
 
@@ -64,7 +71,7 @@
 
             <section class="window">
                 <div class="window-header">
-                    <span class="title" data-i18n="networks">Redes</span>
+                    <span class="title" data-i18n="socials"></span>
                     <div class="window-controls">
                         <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M2 17h20v4H2z"/></svg></button>
                         <button class="win-btn"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm4 4v10h10V7H7z"/></svg></button>
