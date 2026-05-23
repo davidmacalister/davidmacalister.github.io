@@ -144,6 +144,13 @@ body::after {
     position: fixed; top: 0; left: 0; width: 100%; height: 200px;
     background: linear-gradient(to bottom, rgba(30, 17, 13, 1) 0%, transparent 100%);
     z-index: 100000; pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Degradê desaparece quando a header some ao rolar pra baixo */
+body.scrolled:not(.show-header)::after {
+    opacity: 0;
 }
 
 /* --- 3. HEADER STICKY --- */
