@@ -41,6 +41,14 @@ function changeLanguage(lang) {
             : "https://twemoji.maxcdn.com/v/latest/svg/1f1fa-1f1f8.svg";
     }
 
+    document.querySelectorAll('.lang-dropdown li').forEach(li => {
+        if (li.dataset.lang === normalized) {
+            li.classList.add('active');
+        } else {
+            li.classList.remove('active');
+        }
+    });
+
     document.body.classList.remove('lang-loading');
 }
 
@@ -51,10 +59,12 @@ function initLangDropdown() {
 
     const selected = selector.querySelector('.lang-selected');
 
-    selected.addEventListener('click', (e) => {
-        e.stopPropagation();
-        selector.classList.toggle('open');
-    });
+    if (selected) {
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selector.classList.toggle('open');
+        });
+    }
 
     selector.querySelectorAll('.lang-dropdown li').forEach(li => {
         li.addEventListener('click', () => {
@@ -77,7 +87,6 @@ function updateHeaderScroll() {
     if (currentScrollY > threshold) {
         body.classList.add('scrolled');
         
-        // Se a diferença for mínima, ignorar (evita trepidação no mobile)
         if (Math.abs(currentScrollY - lastScrollY) < 10) {
             ticking = false;
             return;
@@ -103,7 +112,32 @@ window.addEventListener('scroll', () => {
     }
 }, { passive: true });
 
+// 5. Menu Mobile
+function initMobileMenu() {
+    const topNav = document.querySelector('.top-nav');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    if (!topNav || !toggleBtn) return;
+
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        topNav.classList.toggle('nav-open');
+    });
+
+    topNav.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            topNav.classList.remove('nav-open');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!topNav.contains(e.target)) {
+            topNav.classList.remove('nav-open');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     loadTranslations();
     initLangDropdown();
+    initMobileMenu();
 });
