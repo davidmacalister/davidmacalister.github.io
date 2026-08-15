@@ -9,9 +9,8 @@ async function loadTranslations() {
         translations = await response.json();
         
         const savedLang = localStorage.getItem('userLanguage');
-        const browserLang = navigator.language.startsWith('pt') ? 'pt' : 'en';
-
-        changeLanguage(savedLang || browserLang);
+        // Padrão sempre em português 'pt' (garante indexação no Google em PT-BR)
+        changeLanguage(savedLang || 'pt');
     } catch (error) {
         console.error("Erro ao carregar traduções:", error);
         document.body.classList.remove('lang-loading');
