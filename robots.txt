@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://davidmacalister.github.io/sitemap.xml
+Sitemap: https://meninodavid.github.io/sitemap.xml
