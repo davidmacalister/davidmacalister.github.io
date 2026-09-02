@@ -333,40 +333,165 @@ a {
     display: none !important;
 }
 
-/* 6. COLUNA LATERAL E REDES SOCIAIS */
-.side-column { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 35px; 
+/* 6. PÁGINA SOBRE E PERFIL UNIFICADO */
+.about-page-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
 }
 
-.avatar-content {
+.profile-window {
     padding: 0;
+    overflow: hidden;
 }
 
-.avatar-img img { 
-    width: 100%; 
-    height: auto;
-    display: block; 
+.profile-window .window-header {
+    justify-content: flex-end;
+    padding: 8px 12px;
 }
 
-.links-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
+.profile-banner-container {
+    position: relative;
+    width: 100%;
+    background-color: #23170f;
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid var(--border-color);
 }
 
-.links-list a {
-    text-decoration: none;
-    font-size: 26px;
+.profile-banner {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.profile-avatar-wrapper {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
-.social-icon {
-    width: 32px; 
-    height: 32px;
-    margin-right: 12px;
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-header-info {
+    margin-top: 55px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.profile-name {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--border-color);
+    line-height: 1.1;
+    margin-bottom: 2px;
+}
+
+.profile-handle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    opacity: 0.9;
+    display: block;
+}
+
+.profile-social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 25px 25px 15px 25px;
+}
+
+.social-grid-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 3px solid var(--border-color);
+    padding: 12px 10px;
+    color: var(--border-color);
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-grid-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-color);
+    z-index: 0;
+    transition: left 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.social-grid-btn::after {
+    display: none !important;
+}
+
+.social-grid-btn:hover::before {
+    left: 0;
+}
+
+.social-grid-btn:hover {
+    color: var(--accent-brown);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+    transform: translate(2px, 2px);
+}
+
+.social-grid-btn span,
+.social-grid-btn .social-icon {
+    position: relative;
+    z-index: 1;
+}
+
+.social-grid-btn .social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
     fill: currentColor;
+    flex-shrink: 0;
+    transition: fill 0.25s ease;
+}
+
+.profile-bio {
+    padding: 20px 25px 30px 25px;
+    margin-top: 10px;
+}
+
+.profile-bio .about-title-body {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--border-color);
+    margin-bottom: 12px;
 }
 
 /* 7. ESTILOS DA PÁGINA INICIAL (HOME) */
@@ -888,19 +1013,63 @@ a {
     }
 
     .project-card .window-header .title,
-    .about-card .window-header .title,
-    .avatar-card .window-header .title,
-    .socials-card .window-header .title {
+    .profile-window .window-header .title {
         display: none;
     }
 
     .project-card .window-header,
-    .about-card .window-header,
-    .avatar-card .window-header,
-    .socials-card .window-header {
+    .profile-window .window-header {
         justify-content: flex-end;
         padding: 6px !important;
         min-height: auto !important;
+    }
+
+    .about-page-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .profile-avatar-wrapper {
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+    }
+
+    .profile-header-info {
+        margin-top: 48px;
+    }
+
+    .profile-name {
+        font-size: 26px;
+    }
+
+    .profile-handle {
+        font-size: 17px;
+    }
+
+    .profile-social-grid {
+        gap: 10px;
+        padding: 20px 15px 10px 15px;
+    }
+
+    .social-grid-btn {
+        padding: 10px 6px;
+        font-size: 15px;
+        gap: 6px;
+        border-width: 2px;
+    }
+
+    .social-grid-btn .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .profile-bio {
+        padding: 15px 15px 25px 15px;
+    }
+
+    .profile-bio .about-title-body {
+        font-size: 24px;
     }
 
     .project-title-body,
