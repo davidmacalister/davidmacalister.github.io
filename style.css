@@ -338,7 +338,7 @@ a {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.4fr 0.9fr;
+    grid-template-columns: 1.68fr 0.9fr;
     gap: 30px;
     align-items: stretch;
 }
@@ -433,8 +433,8 @@ a {
 .profile-social-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    padding: 25px 25px 25px 25px;
+    gap: 10px;
+    padding: 20px 18px;
 }
 
 .social-grid-btn {
@@ -442,12 +442,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     border: 3px solid var(--border-color);
-    padding: 12px 10px;
+    padding: 10px 6px;
     color: var(--border-color);
     font-weight: 900;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none !important;
     text-transform: uppercase;
     background-color: var(--bg-color);
