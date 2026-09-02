@@ -333,21 +333,36 @@ a {
     display: none !important;
 }
 
-/* 6. PÁGINA SOBRE E PERFIL UNIFICADO */
+/* 6. PÁGINA SOBRE (2 JANELAS LADO A LADO NO PC) */
 .about-page-container {
-    max-width: 600px;
+    max-width: 1100px;
     margin: 0 auto;
-    display: block;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.about-window {
+    order: 1;
 }
 
 .profile-window {
-    padding: 0;
-    overflow: hidden;
+    order: 2;
 }
 
-.profile-window .window-header {
-    justify-content: flex-end;
-    padding: 8px 12px;
+.profile-window,
+.about-window {
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.profile-window .window-header,
+.about-window .window-header {
+    justify-content: space-between;
+    padding: 10px 14px;
 }
 
 .profile-banner-container {
@@ -419,7 +434,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    padding: 25px 25px 15px 25px;
+    padding: 25px 25px 25px 25px;
 }
 
 .social-grid-btn {
@@ -483,15 +498,26 @@ a {
 }
 
 .profile-bio {
-    padding: 20px 25px 30px 25px;
-    margin-top: 10px;
+    padding: 30px;
 }
 
 .profile-bio .about-title-body {
     font-size: 32px;
     font-weight: 900;
     color: var(--border-color);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.mobile-bio-only {
+    display: none !important;
+}
+
+.desktop-only-window {
+    display: flex !important;
+}
+
+.desktop-only-title {
+    display: block;
 }
 
 /* 7. ESTILOS DA PÁGINA INICIAL (HOME) */
@@ -1013,20 +1039,41 @@ a {
     }
 
     .project-card .window-header .title,
-    .profile-window .window-header .title {
+    .profile-window .window-header .title,
+    .about-window .window-header .title {
         display: none;
     }
 
     .project-card .window-header,
-    .profile-window .window-header {
+    .profile-window .window-header,
+    .about-window .window-header {
         justify-content: flex-end;
         padding: 6px !important;
         min-height: auto !important;
     }
 
     .about-page-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
         max-width: 100%;
         padding: 0;
+    }
+
+    .profile-window,
+    .about-window {
+        height: auto;
+    }
+
+    .mobile-bio-only {
+        display: block !important;
+    }
+
+    .desktop-only-window {
+        display: none !important;
+    }
+
+    .desktop-only-title {
+        display: none !important;
     }
 
     .profile-avatar-wrapper {
