@@ -258,7 +258,7 @@ body.scrolled:not(.show-header) .top-nav {
 
 .window-header {
     border-bottom: 4px solid var(--border-color);
-    padding: 10px 12px 10px 16px;
+    padding: 10px 10px 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -362,7 +362,7 @@ a {
 .profile-window .window-header,
 .about-window .window-header {
     justify-content: space-between;
-    padding: 10px 12px;
+    padding: 10px 10px 10px 20px;
 }
 
 .profile-banner-container {
@@ -1048,7 +1048,7 @@ a {
     .profile-window .window-header,
     .about-window .window-header {
         justify-content: flex-end;
-        padding: 6px 10px !important;
+        padding: 6px !important;
         min-height: auto !important;
     }
 
